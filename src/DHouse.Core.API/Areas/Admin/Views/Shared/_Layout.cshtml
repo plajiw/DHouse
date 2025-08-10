@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@ViewData["Title"] - Admin</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+    <header class="p-4 bg-white shadow flex justify-between">
+        <div class="font-semibold">DHouse Admin</div>
+        <form method="post" action="/admin/auth/logout">
+            <button class="text-sm text-red-600 hover:underline">Sair</button>
+            @Html.AntiForgeryToken()
+        </form>
+    </header>
+    <main class="p-6 container mx-auto">
+        @RenderBody()
+    </main>
+</body>
+</html>

@@ -1,17 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\DHouse.Core.Application\DHouse.Core.Application.csproj" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="RavenDB.Client" Version="7.1.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<!-- usa APIs do ASP.NET (IWebHostEnvironment) -->
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DHouse.Core.Domain\DHouse.Core.Domain.csproj" />
+	</ItemGroup>
 
 </Project>
