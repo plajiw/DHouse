@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "_Layout"; ViewData["Title"] = "Novo Lead";
+}
+<h1 class="text-xl font-semibold mb-4">Novo Lead</h1>
+<form method="post" action="/admin/leads/novo">
+    @Html.AntiForgeryToken()
+    <div class="grid gap-3 max-w-xl">
+        <input name="nome" class="border rounded px-3 py-2" placeholder="Nome" required />
+        <input name="telefone" class="border rounded px-3 py-2" placeholder="Telefone (E164 ex.: 5562999990000)" />
+        <input name="email" class="border rounded px-3 py-2" placeholder="E-mail" />
+        <textarea name="observacoes" class="border rounded px-3 py-2" placeholder="Observações"></textarea>
+        <div><button class="px-3 py-2 rounded bg-slate-900 text-white">Salvar</button></div>
+    </div>
+</form>

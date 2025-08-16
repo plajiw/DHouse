@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DHouse.Core.Domain.Entities.Lead>
+<table class="w-full bg-white rounded-xl shadow">
+    <thead>
+        <tr class="text-left">
+            <th class="p-3">Nome</th>
+            <th class="p-3">Telefone</th>
+            <th class="p-3">Status</th>
+            <th class="p-3">Criado</th>
+            <th class="p-3"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var l in Model)
+        {
+            <tr class="border-t">
+                <td class="p-3">@l.Nome</td>
+                <td class="p-3">
+                    @l.Telefone
+                    @if (!string.IsNullOrWhiteSpace(l.Telefone))
+                    {
+                        <a class="ml-2 underline text-green-700"
+                           hx-post="/api/whatsapp/send"
+                           hx-headers='{"Content-Type":"application/json"}'
+                           hx-trigger="click"
+                           hx-vals='{"to":"@l.Telefone","message":"Olá @l.Nome, aqui é da D HOUSE IMÓVEIS. Recebemos seu contato e já vamos te atender."}'
+                           hx-swap="none">WhatsApp</a>
+                    }
+                </td>
+                <td class="p-3">@await Html.PartialAsync("_LeadBadge", l)</td>
+                <td class="p-3">@l.CriadoEm.LocalDateTime.ToString("dd/MM/yyyy HH:mm")</td>
+                <td class="p-3 text-right"><a class="underline" href="/admin/leads/@l.Id">Abrir</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
