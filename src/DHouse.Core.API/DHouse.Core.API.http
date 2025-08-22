@@ -1,6 +1,0 @@
-@DHouse.Core.API_HostAddress = http://localhost:5009
-
-GET {{DHouse.Core.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

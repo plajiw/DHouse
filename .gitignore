@@ -1,53 +1,6 @@
-# DHouse Project .gitignore
-
-# 1. ARQUIVOS DE CONFIGURAÇÃO E CACHE DO VISUAL STUDIO
-/.vs/
-*.suo
+# Visual Studio
+.vs/
+[Bb]in/
+[Oo]bj/
 *.user
-*.userosscache
-*.sln.docstates
-
-# 2. ARTEFATOS DE BUILD DO .NET
-**/[Bb]in/
-**/[Oo]bj/
-
-# 3. PROJETOS WEB E DEPENDÊNCIAS
-wwwroot/dist
-/node_modules/ # Para quando o projeto Angular for adicionado
-/packages/
-/npm-debug.log
-/yarn.lock
-/yarn-error.log
-
-# 4. ARQUIVOS DE PUBLICAÇÃO E TESTES
-**/[Pp]ublish/
-**/[Aa]rtifacts/
-/TestResults/
-*.trx
-
-# 5. ARQUIVOS SENSÍVEIS E DE DESENVOLVIMENTO LOCAL
-appsettings.Development.json
-secrets.json
-*.secrets.json
-
-# 6. ARQUIVOS DE SISTEMA OPERACIONAL
-Thumbs.db
-ehthumbs.db
-[Dd]esktop.ini
-$RECYCLE.BIN/
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# 7. LOGS E ARQUIVOS DE DIAGNÓSTICO
-*.log
-*.log.*
-*.dmp
-*.pid
-*.pid.lock
-
-# 8. OUTRAS FERRAMENTAS E IDES
-.idea/ # Rider / IntelliJ
-.vscode/ # VS Code (manter launch.json se for compartilhado, mas ignorar o resto)
-!.vscode/launch.json
-!.vscode/tasks.json
+*.suo
