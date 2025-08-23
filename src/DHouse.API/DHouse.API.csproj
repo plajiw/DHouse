@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DHouse.Core\DHouse.Core.csproj" />
-    <ProjectReference Include="..\DHouse.Application\DHouse.Application.csproj" />
     <ProjectReference Include="..\DHouse.Infrastructure\DHouse.Infrastructure.csproj" />
   </ItemGroup>
 
